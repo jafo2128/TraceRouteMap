@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traceroute to google maps</title>
+    <style>
+        html, body {
+            height: 90%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            width: 70%;
+            height: 80%;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+        #toolbox {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<script src="papaparse.min.js"></script>
+<script src="gmap.js"></script>
+<script src="gui.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsd_uqEm4qdydfuCjm-MCSR7qHJ-Q4LZM&callback=initMap">
+</script>
+<h2 align="center">Traceroute to google maps</h2>
+<div id="map"></div>
+<div id="toolbox">
+    <!--ENABLE ALL-->
+    <input id="AllColor" class="colorInput" type="color" value="#ffffff" oninput="allColorClicked()">
+    <input id="AllMarker" class="markerCheckBox" type="checkbox" name="Enable Marker" onclick="allMarkerClicked()">
+    <input id="AllMap" class="mapCheckBox" type="checkbox"  onclick="allMapClicked()">
+    <label for="AllMap">Enable all</label>
+    <br>
+    <!--ARGENTINA-->
+    <input id="ArgentinaColor" class="colorInput" type="color" value="#ff0000">
+    <input id="ArgentinaMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="Argentina" class="mapCheckBox" type="checkbox" >
+    <label for="Argentina">Argentina</label>
+    <br>
+    <!--ARIZONA-->
+    <input id="ArizonaColor" class="colorInput" type="color" value="#cc0000">
+    <input id="ArizonaMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="Arizona" class="mapCheckBox" type="checkbox" >
+    <label for="Arizona">Arizona</label>
+    <br>
+    <!--Australia-->
+    <input id="AustraliaColor" class="colorInput" type="color" value="#880000">
+    <input id="AustraliaMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="Australia" class="mapCheckBox" type="checkbox" >
+    <label for="Australia">Australia</label>
+    <br>
+    <!--Belgium-->
+    <input id="BelgiumColor" class="colorInput" type="color" value="#440000">
+    <input id="BelgiumMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="Belgium" class="mapCheckBox" type="checkbox" >
+    <label for="Belgium">Belgium</label>
+    <br>
+    <!--Brazil-->
+    <input id="BrazilColor" class="colorInput" type="color" value="#00ff00">
+    <input id="BrazilMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="Brazil" class="mapCheckBox" type="checkbox" >
+    <label for="Brazil">Brazil</label>
+    <br>
+    <!--California-->
+    <input id="CaliforniaColor" class="colorInput" type="color" value="#00cc00">
+    <input id="CaliforniaMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="California" class="mapCheckBox" type="checkbox" >
+    <label for="California">California</label>
+    <br>
+    <!--Canada-->
+    <input id="CanadaColor" class="colorInput" type="color" value="#008800">
+    <input id="CanadaMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="Canada" class="mapCheckBox" type="checkbox" >
+    <label for="Canada">Canada</label>
+    <br>
+    <!--Germany-->
+    <input id="GermanyColor" class="colorInput" type="color" value="#004400">
+    <input id="GermanyMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="Germany" class="mapCheckBox" type="checkbox" >
+    <label for="Germany">Germany</label>
+    <br>
+    <!--India-->
+    <input id="IndiaColor" class="colorInput" type="color" value="#0000ff">
+    <input id="IndiaMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="India" class="mapCheckBox" type="checkbox" >
+    <label for="India">India</label>
+    <br>
+    <!--Indonesia-->
+    <input id="IndonesiaColor" class="colorInput" type="color" value="#0000cc">
+    <input id="IndonesiaMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="Indonesia" class="mapCheckBox" type="checkbox" >
+    <label for="Indonesia">Indonesia</label>
+    <br>
+    <!--Pakistan-->
+    <input id="PakistanColor" class="colorInput" type="color" value="#000088">
+    <input id="PakistanMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="Pakistan" class="mapCheckBox" type="checkbox" >
+    <label for="Pakistan">Pakistan</label>
+    <br>
+    <!--Poland-->
+    <input id="PolandColor" class="colorInput" type="color" value="#000044">
+    <input id="PolandMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="Poland" class="mapCheckBox" type="checkbox" >
+    <label for="Poland">Poland</label>
+    <br>
+    <!--Thailand-->
+    <input id="ThailandColor" class="colorInput" type="color" value="#ffffff">
+    <input id="ThailandMarker" class="markerCheckBox" type="checkbox" name="Enable Marker">
+    <input id="Thailand" class="mapCheckBox" type="checkbox" >
+    <label for="Thailand">Thailand</label>
+    <br>
+    <br>
+    <button id="startButton" onclick="loadData()">LoadData</button>
+</div>
+</body>
+</html>
