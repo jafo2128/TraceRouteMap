@@ -184,6 +184,16 @@ function loadData() {
             readData("../data/CanadaE/CanadaE" + i + ".csv",color,markerEnable,"Canada");
         }
     }
+    //Chile
+    color = document.getElementById('ChileColor').value;
+    markerEnable = document.getElementById('ChileMarker').checked;
+    countryEnable = document.getElementById('Chile').checked;
+    if (countryEnable) {
+        tracesCount = tracesCount+20;
+        for (var i =1; i<=20;i++) {
+            readData("../data/Chile/Chile" + i + ".csv",color,markerEnable,"Chile");
+        }
+    }
     //Germany
     color = document.getElementById('GermanyColor').value;
     markerEnable = document.getElementById('GermanyMarker').checked;
@@ -214,6 +224,36 @@ function loadData() {
             readData("../data/Indonesia/Indonesia" + i + ".csv",color,markerEnable,"Indonesia");
         }
     }
+    //Italy
+    color = document.getElementById('ItalyColor').value;
+    markerEnable = document.getElementById('ItalyMarker').checked;
+    countryEnable = document.getElementById('Italy').checked;
+    if (countryEnable) {
+        tracesCount = tracesCount+20;
+        for (var i =1; i<=20;i++) {
+            readData("../data/Italy/Italy" + i + ".csv",color,markerEnable,"Italy");
+        }
+    }
+    //Netherlands
+    color = document.getElementById('NetherlandsColor').value;
+    markerEnable = document.getElementById('NetherlandsMarker').checked;
+    countryEnable = document.getElementById('Netherlands').checked;
+    if (countryEnable) {
+        tracesCount = tracesCount+20;
+        for (var i =1; i<=20;i++) {
+            readData("../data/Netherlands/Netherlands" + i + ".csv",color,markerEnable,"Netherlands");
+        }
+    }
+    //NewYork
+    color = document.getElementById('NewYorkColor').value;
+    markerEnable = document.getElementById('NewYorkMarker').checked;
+    countryEnable = document.getElementById('NewYork').checked;
+    if (countryEnable) {
+        tracesCount = tracesCount+20;
+        for (var i =1; i<=20;i++) {
+            readData("../data/NewYorkC/NewYork" + i + ".csv",color,markerEnable,"NewYork");
+        }
+    }
     //Pakistan
     color = document.getElementById('PakistanColor').value;
     markerEnable = document.getElementById('PakistanMarker').checked;
@@ -234,6 +274,26 @@ function loadData() {
             readData("../data/Poland/Poland" + i + ".csv",color,markerEnable,"Poland");
         }
     }
+    //SouthAfrica
+    color = document.getElementById('SouthAfricaColor').value;
+    markerEnable = document.getElementById('SouthAfricaMarker').checked;
+    countryEnable = document.getElementById('SouthAfrica').checked;
+    if (countryEnable) {
+        tracesCount = tracesCount+20;
+        for (var i =1; i<=20;i++) {
+            readData("../data/SouthAfrica/SouthAfrica" + i + ".csv",color,markerEnable,"South Africa");
+        }
+    }
+    //Sweden
+    color = document.getElementById('SwedenColor').value;
+    markerEnable = document.getElementById('SwedenMarker').checked;
+    countryEnable = document.getElementById('Sweden').checked;
+    if (countryEnable) {
+        tracesCount = tracesCount+20;
+        for (var i =1; i<=20;i++) {
+            readData("../data/Sweden/Sweden" + i + ".csv",color,markerEnable,"Sweden");
+        }
+    }
     //Thailand
     color = document.getElementById('ThailandColor').value;
     markerEnable = document.getElementById('ThailandMarker').checked;
@@ -242,6 +302,16 @@ function loadData() {
         tracesCount = tracesCount+20;
         for (var i =1; i<=20;i++) {
             readData("../data/Thailand/Thailand" + i + ".csv",color,markerEnable,"Thailand");
+        }
+    }
+    //UnitedKingdom
+    color = document.getElementById('UnitedKingdomColor').value;
+    markerEnable = document.getElementById('UnitedKingdomMarker').checked;
+    countryEnable = document.getElementById('UnitedKingdom').checked;
+    if (countryEnable) {
+        tracesCount = tracesCount+20;
+        for (var i =1; i<=20;i++) {
+            readData("../data/UnitedKingdom/UnitedKingdom" + i + ".csv",color,markerEnable,"United Kingdom");
         }
     }
 }
